@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#112f39">
+  <meta name="description" content="Miscela: calcola quantità e carichi e segui la guida alla preparazione sul tuo telefono.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Miscela">
+  <title>Miscela — Guida alla preparazione</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <header class="topbar"><div class="brand"><img src="icon.svg" alt="" width="38" height="38"><div><strong>Miscela</strong><span>Guida alla preparazione</span></div></div><button id="historyButton" class="header-button" type="button">Storico <span id="historyCount">0</span></button></header>
+  <main class="shell">
+    <nav aria-label="Fasi della guida" class="progress"><ol id="progress"></ol></nav>
+    <div id="storageNotice" class="notice" role="status" hidden></div>
+    <div id="error" class="error" role="alert" hidden></div>
+    <section id="content"></section>
+    <footer><p id="disclaimer"></p><p class="local-note">Le preparazioni sono salvate su questo dispositivo.</p><details class="install-note"><summary>Usala come app sul telefono</summary><p>Su iPhone: Safari → Condividi → Aggiungi alla schermata Home. Su Android: dal menu del browser scegli Installa app o Aggiungi alla schermata Home, se disponibile.</p></details></footer>
+  </main>
+  <dialog id="historyDialog" aria-labelledby="historyTitle"><div class="dialog-head"><h2 id="historyTitle">Le mie preparazioni</h2><button id="closeHistory" class="secondary" type="button">Chiudi</button></div><div id="historyContent"></div></dialog>
+  <script src="recipes-model.js"></script>
+  <script src="planner.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
